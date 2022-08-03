@@ -1,0 +1,38 @@
+body {
+    background-image: url("paris.jpg");
+    background-size: cover;
+    width: auto;
+    height: auto;
+  }
+  #holiday{
+      background-color: transparent;
+      color: white;
+      font-size: 35px;
+      font-family: trebuchet ms;
+      padding-left: 30px;
+  }
+  a{
+      color: lightblue;
+      text-decoration: none;
+      font-size: 20px;
+  }
+  #links{
+      align-content: left;
+      padding-right: 70px; 
+      padding-top: 20px;
+  }
+  #mainText{
+      color: gold;
+      text-shadow: 0 0 5px #000000; 
+      font-family:'Times New Roman', Times, serif; 
+      font-size: 30px;
+  }
+  #subText{
+      color: lightyellow;
+      text-shadow: 0 0 10px #000000; 
+      font-family:'Times New Roman', Times, serif; 
+      font-size: 17px;
+  }
+  label{
+    color: antiquewhite;
+  }
