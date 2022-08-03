@@ -1,0 +1,56 @@
+*{
+    font-family:'Trebuchet MS';
+}
+p,h1,h3{
+    background-color: azure;
+}
+p{
+    color: blueviolet;
+}
+p::first-letter{
+    color: red;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+h1{
+    color: red;
+    padding-left: 100px;
+    border: 2px;
+    border-style: solid;
+    border-color: green;
+    margin: 50px;
+
+}
+
+h3{
+    width: 120px;
+    height: 30px;
+    padding: 20px;
+    margin: 30px;
+    border: 2px solid;
+    color: red;
+}
+
+h4{
+    color:rgb(102, 51, 153,0.6) !important; /*adding last two digits control transparency*/
+}
+
+a:hover{
+    border: green 2px dotted;
+}
+
+input[type="button"]{
+    background-color: blanchedalmond;
+
+}
+
+.first{
+    color: #008b8b60; /*adding last two digits control transparency*/
+}
+
+#this{
+    color: rgb(137, 207, 7); 
+    font-family: comic sans ms;
+}
+
