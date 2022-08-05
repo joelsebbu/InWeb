@@ -131,15 +131,21 @@
 
 //OOps
 
-class Person{
-    constructor(name,age){
-        this.name=name;
-        this.age=age;
-    }
-    speak(){
-        console.log(this.name+" says hello");
-    }
-}
-a = new Person("John",20);
-a.speak()
+// class Person{
+//     constructor(name,age){
+//         this.name=name;
+//         this.age=age;
+//     }
+//     speak(){
+//         console.log(this.name+" says hello");
+//     }
+// }
+// a = new Person("John",20);
+// a.speak()
+
+
+let bt = document.querySelector("#submit");
+bt.addEventListener("click",function(){
+    alert("hello");
+});
 
