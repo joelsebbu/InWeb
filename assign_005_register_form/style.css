@@ -23,18 +23,17 @@ body{
     padding: 2%;
     padding-left: 5%;
     padding-bottom: 0%;
-    /* background-color: #f2f2f2; */
     border-radius: 20px; 
     backdrop-filter: blur(30px);
 }
 .groupify{
     margin-bottom: 30px;
 }
-.fullNameEnter{
+.insert{
     margin-top: 5px;
     background: transparent;
     padding: 10px 130px 14px 15px;
-    border: 1px solid red;
+    border: 1.5px solid mediumseagreen;
 	outline: none;
 	border-radius: 30px;
 }
@@ -44,7 +43,7 @@ body{
 }
 #submitButton{
     margin-top:0px;
-    background-color:#f9004d;
+    background-color:mediumseagreen;
 	color: white;
 	text-decoration: none;
 	border: 2px solid transparent;
@@ -55,9 +54,14 @@ body{
 }
 #submitButton:hover{
     background-color: transparent;
-	border: 2px solid #f9004d;
+	border: 2px solid lightgreen;
 	cursor: pointer;
 }
 ::placeholder{
     color: whitesmoke;
 }
+input, select, textarea{
+    color: white;  
+    text-shadow: 0 0 5px black;
+}
+
