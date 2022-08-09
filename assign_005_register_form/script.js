@@ -1,32 +1,42 @@
-function emptyError(err){
-  console.log(err);
-  
+function set(s,v){
+  document.getElementById(s).style.borderColor = 'red';
+  document.getElementById(s+'-'+v).style.display = 'block';
 }
 
+function reset(s,v){
+  document.getElementById(s).style.borderColor = 'mediumseagreen';
+  document.getElementById(s+'-'+v).style.display = 'none';
+}
 
-let submitButton = document.getElementById('submitButton');
-submitButton.addEventListener('click',function(){
-  let name = document.getElementById("name").value;
-  let email = document.getElementById("email").value;
-  let phone = document.getElementById("phone").value;
-  let password = document.getElementById("pass").value;
-  let confirmPassword = document.getElementById("confirm").value;
-  let success =true
-  try{
-    if(name == "") throw "Name";
+let submit = document.getElementById('submit');
+submit.addEventListener('click', function(e) {
 
-    if(email == "") throw "Email";
+  if(document.getElementById('name').value == '') set('name','miss')
+  else reset('name','miss')
 
-    if(phone == "") throw "Phone";
+  if(document.getElementById('name').value.match(/^[a-zA-Z]+$/)) reset('name','min')
+  else set('name','min')
 
-    if(password == "") throw "Password";
-    
-    if(confirmPassword == "") throw "Confirm";
-    
-    if(password != confirmPassword) throw "Password and Confirm Password must be same";  
-  }
-  catch(err){
-    console.log(typeof(err));
-    emptyError(err);
-  }
+  if(document.getElementById('email').value == '') set('email','miss')
+  else reset('email','miss')
+
+  if(document.getElementById('phone').value == '') set('phone','miss')
+  else reset('phone','miss')
+
+  if(document.getElementById('phone').value.match(/^[0-9]{10}$/)) reset('phone','min')
+  else set('phone','min')
+
+  if(document.getElementById('pass').value == '') set('pass','miss')
+  else reset('pass','miss')
+
+  if(document.getElementById('pass').value.length < 8) set('pass','min')
+  else reset('pass','min')
+
+
+  if(document.getElementById('confirm').value == '') set('confirm','miss')
+  else reset('confirm','miss')
+
+  if(document.getElementById('confirm').value.length < 8) set('confirm','min')
+  else reset('confirm','min')
+
 });

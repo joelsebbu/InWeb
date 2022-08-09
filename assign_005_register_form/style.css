@@ -2,6 +2,12 @@ body{
     background-image: url("bg_01.jpg");
     background-size: cover ;
 }
+p{
+    display:none;
+    color:red ;
+    text-shadow: none;
+
+}
 #heading{
     font-size: 20px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -14,7 +20,7 @@ body{
 #form{
     margin-top:10px;
     width: 30%;
-    height: 550px;
+    height: auto;
     margin: auto;
     color: white;  
     text-shadow: 0 0 5px black;
@@ -27,7 +33,7 @@ body{
     backdrop-filter: blur(30px);
 }
 .groupify{
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 .insert{
     margin-top: 5px;
@@ -40,6 +46,7 @@ body{
 #submit{
     margin-top:0px;
     margin-left: 29%;
+    padding-bottom: 10px;
 }
 #submitButton{
     margin-top:0px;
