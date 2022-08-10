@@ -51,6 +51,26 @@ input{
     border-radius: 40px;
     background-color: #242830;
 }
+#POWER{
+    background-color: #191b1b;
+    color:orange;
+    font-size: 130%;
+    font-family: 'montserrat';
+    height: 15%;
+    width: 15%;
+    margin: 2%;
+    padding: 1%;
+    margin-left: 6%;
+    border-radius: 10px;
+    cursor: pointer;
+    border: none;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.07), 
+    0 2px 4px rgba(0,0,0,0.07), 
+    0 4px 8px rgba(0,0,0,0.07), 
+    0 8px 16px rgba(0,0,0,0.07),
+    0 16px 32px rgba(0,0,0,0.07), 
+    0 32px 64px rgba(0,0,0,0.07);
+}
 .button{
     background-color: #191b1b;
     color: white;
@@ -72,6 +92,9 @@ input{
     0 32px 64px rgba(0,0,0,0.07);
     
 }
+#screen{
+    color:white;
+}
 .button:hover{
     color:#191b1b;
     background-color: white;
@@ -85,10 +108,8 @@ input{
     background-color: cyan;
 }
 
-#AC{
-    color:orange;
-}
-#AC:hover{
+
+#POWER:hover{
     background-color: orange;
     color: #191b1b;
 }

@@ -1,9 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
@@ -13,30 +11,30 @@
             <input  id="screen"></input>
         </div>
         <div class="buttons">
-            <button class ="button" id="AC" >AC</button>
-            <button class ="button" id="C">C</button>
-            <button class ="button operation" id="mod">%</button>
-            <button class ="button operation" id="equal">=</button>
+            <button class ="button" id="POWER" onclick="power()" >ON</button>
+            <button class ="button" id="C" onclick="reset()">C</button>
+            <button class ="button operation" id="mod" onclick="btnPress('%')">%</button>
+            <button class ="button operation" id="add" onclick="btnPress('+')">+</button>
             <br>
-            <button class ="button number" id="7">7</button>
-            <button class ="button number" id="8">8</button>
-            <button class ="button number" id="9">9</button>
-            <button class ="button operation" id="divide">/</button>
+            <button class ="button number" id="7" onclick="btnPress('7')">7</button>
+            <button class ="button number" id="8" onclick="btnPress('8')">8</button>
+            <button class ="button number" id="9" onclick="btnPress('9')">9</button>
+            <button class ="button operation" id="subtract" onclick="btnPress('-')">-</button>
             <br>
-            <button class ="button number" id="4">4</button>
-            <button class ="button number" id="5">5</button>
-            <button class ="button number" id="6">6</button>
-            <button class ="button operation" id="multiply">*</button>
+            <button class ="button number" id="4" onclick="btnPress('4')">4</button>
+            <button class ="button number" id="5" onclick="btnPress('5')">5</button>
+            <button class ="button number" id="6" onclick="btnPress('6')">6</button>
+            <button class ="button operation" id="multiply" onclick="btnPress('*')">*</button>
             <br>
-            <button class ="button number" id="1">1</button>
-            <button class ="button number" id="2">2</button>
-            <button class ="button number" id="3">3</button>
-            <button class ="button operation" id="subtract">-</button>
+            <button class ="button number" id="1" onclick="btnPress('1')">1</button>
+            <button class ="button number" id="2" onclick="btnPress('2')">2</button>
+            <button class ="button number" id="3" onclick="btnPress('3')">3</button>
+            <button class ="button operation" id="divide" onclick="btnPress('/')">/</button>
             <br>
-            <button class ="button number" id="00">00</button>
-            <button class ="button number" id="0">0</button>
-            <button class ="button number" id="dot">.</button>
-            <button class ="button operation" id="add">+</button>
+            <button class ="button number" id="00" onclick="btnPress('00')">00</button>
+            <button class ="button number" id="0" onclick="btnPress('0')">0</button>
+            <button class ="button number" id="dot" onclick="btnPress('.')">.</button>
+            <button class ="button operation" id="equal" onclick="calculate()">=</button>
         </div>
     </div>
     <script src="script.js"></script>
