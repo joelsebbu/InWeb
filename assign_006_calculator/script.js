@@ -2,12 +2,14 @@ toggle = true
 function power(){
     if(toggle){
         reset()
+        document.getElementById("POWER").innerHTML="ON";
         document.querySelectorAll('.button').forEach(elem => {
             elem.disabled = true;
         });
         toggle = false;
     }
     else{
+        document.getElementById("POWER").innerHTML="OFF";
         document.querySelectorAll('.button').forEach(elem => {
             elem.disabled = false;
         });
