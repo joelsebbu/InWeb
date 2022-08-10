@@ -1,13 +1,14 @@
 toggle = true
 function power(){
     if(toggle){
-        document.querySelectorAll('.className button').forEach(elem => {
+        reset()
+        document.querySelectorAll('.button').forEach(elem => {
             elem.disabled = true;
         });
         toggle = false;
     }
     else{
-        document.querySelectorAll('.className button').forEach(elem => {
+        document.querySelectorAll('.button').forEach(elem => {
             elem.disabled = false;
         });
         toggle = true;
