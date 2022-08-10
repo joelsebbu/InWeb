@@ -1,0 +1,16 @@
+.div1 {
+    width: 100px;
+    height: 100px;
+    
+    text-align: center;
+    border: 1px solid blue;
+    
+  }
+  
+  .div2 {
+    width: 100px;
+    height: 100px;  
+    /* padding: 50%; */
+    border: 1px solid red;
+    box-sizing: border-box;
+  }
