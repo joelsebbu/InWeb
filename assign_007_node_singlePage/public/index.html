@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="bundle.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+<body>
+    <header class="mdc-top-app-bar">
+        <div class="mdc-top-app-bar__row">
+          <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
+            <button class="material-icons mdc-top-app-bar__navigation-icon mdc-icon-button" aria-label="Open navigation menu">menu</button>
+            <span class="mdc-top-app-bar__title">Page title</span>
+          </section>
+          <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end" role="toolbar">
+            <button class="material-icons mdc-top-app-bar__action-item mdc-icon-button" aria-label="Favorite">favorite</button>
+            <button class="material-icons mdc-top-app-bar__action-item mdc-icon-button" aria-label="Search">search</button>
+            <button class="material-icons mdc-top-app-bar__action-item mdc-icon-button" aria-label="Options">more_vert</button>
+          </section>
+        </div>
+      </header>
+      <main class="mdc-top-app-bar--fixed-adjust">
+        App content
+      </main>
+    <div>
+    <div><h1>Register form</h1></div>
+    <!-- <div class="mdc-touch-target-wrapper">
+        <div class="mdc-radio mdc-radio--touch">
+            <input class="mdc-radio__native-control" type="radio" id="radio-1" name="radios" checked>
+            <div class="mdc-radio__background">
+                <div class="mdc-radio__outer-circle"></div>
+                <div class="mdc-radio__inner-circle"></div>
+            </div>
+            <div class="mdc-radio__ripple"></div>
+        </div>
+    </div> -->
+    </div>
+
+    <div class="mdc-form-field">
+        <div class="mdc-radio">
+            <input class="mdc-radio__native-control" type="radio" id="radio-1" name="radios" checked>
+            <div class="mdc-radio__background">
+                <div class="mdc-radio__outer-circle"></div>
+                <div class="mdc-radio__inner-circle"></div>
+            </div>
+            <div class="mdc-radio__ripple"></div>
+        </div>
+        <label for="radio-1">Male</label>
+        <div class="mdc-radio">
+            <input class="mdc-radio__native-control" type="radio" id="radio-2" name="radios" checked>
+            <div class="mdc-radio__background">
+                <div class="mdc-radio__outer-circle"></div>
+                <div class="mdc-radio__inner-circle"></div>
+            </div>
+            <div class="mdc-radio__ripple"></div>
+        </div>
+        <label for="radio-2">Female</label>
+    </div>
+    <!-- <br>
+    <label class="mdc-text-field mdc-text-field--filled">
+        <span class="mdc-text-field__ripple"></span>
+        <span class="mdc-floating-label" id="my-label-id">Hint text</span>
+        <input class="mdc-text-field__input" type="text" aria-labelledby="my-label-id">
+        <span class="mdc-line-ripple"></span>
+    </label> -->
+    <br>
+    <div class="mdc-touch-target-wrapper">
+        <div class="mdc-checkbox mdc-checkbox--touch">
+            <input type="checkbox" class="mdc-checkbox__native-control" id="checkbox-1"/>
+            <div class="mdc-checkbox__background">
+                <svg class="mdc-checkbox__checkmark" viewBox="0 0 24 24">
+                    <path class="mdc-checkbox__checkmark-path" fill="none" d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
+                </svg>
+                <div class="mdc-checkbox__mixedmark"></div>
+            </div>
+            <div class="mdc-checkbox__ripple"></div>
+        </div>
+    </div>
+    <label for="checkbox-1">Pizza</label>
+    <div class="mdc-touch-target-wrapper">
+        <div class="mdc-checkbox mdc-checkbox--touch">
+            <input type="checkbox" class="mdc-checkbox__native-control" id="checkbox-2"/>
+            <div class="mdc-checkbox__background">
+                <svg class="mdc-checkbox__checkmark" viewBox="0 0 24 24">
+                    <path class="mdc-checkbox__checkmark-path" fill="none" d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
+                </svg>
+                <div class="mdc-checkbox__mixedmark"></div>
+            </div>
+            <div class="mdc-checkbox__ripple"></div>
+        </div>
+    </div>
+    <label for="checkbox-2">Tacos</label>
+    <br>
+    <br>
+    <div>
+        <button class="submit-button mdc-button">
+            <div class="mdc-button__ripple"></div>
+            <span class="mdc-button__label">Submit</span>
+        </button>
+    </div>
+<script src="bundle.js" async></script>
+</body>
+</html>
