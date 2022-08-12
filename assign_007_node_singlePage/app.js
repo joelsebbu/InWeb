@@ -33,3 +33,6 @@ import {MDCCheckbox} from '@material/checkbox';
 
 const checkbox = new MDCCheckbox(document.querySelector('.mdc-checkbox'));
 formField.input = checkbox;
+
+import {MDCDataTable} from '@material/data-table';
+const dataTable = new MDCDataTable(document.querySelector('.mdc-data-table'));

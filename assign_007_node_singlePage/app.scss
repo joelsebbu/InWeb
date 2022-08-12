@@ -34,6 +34,29 @@
 @use "@material/icon-button";
 @use "@material/top-app-bar/mdc-top-app-bar";
 
+
+//for image list
+@use "@material/image-list/mdc-image-list";
+@use "@material/image-list";
+
+//cards
+@use "@material/card";
+
+//data table
+// @use "@material/checkbox"; // Required only for data table with row selection.
+// @use "@material/icon-button"; // Required only for data table with column sorting.
+@use "@material/data-table/data-table";
+
+// @include checkbox.core-styles;
+// @include icon-button.core-styles;
+@include data-table.core-styles;
+@include data-table.theme-baseline;
+
+@include card.core-styles;
+
+.my-image-list {
+  @include image-list.standard-columns(5);
+}
 // @include icon-button.core-styles;
 @include form-field.core-styles;
 
@@ -46,4 +69,13 @@ body{
 .submit-button{
     // @include button.icon-color(mediumseagreen);
     @include button.ink-color(mediumseagreen);
+}
+
+.my-card-content {
+  padding: 16px;
+}
+
+.my-card {
+  height: 100px;
+  width: fit-content;
 }
