@@ -1,0 +1,11 @@
+{
+    "staff": [{
+    "id": 1,
+    "email": "testuser1@gmail.com",
+    "password": "testpassword1",
+    "first_name": "FirstName 1",
+    "last_name": "LastName 1",
+    "mobile_no": "1111111111",
+    "date_of_joining": "01-01-2021"
+    }]
+    }
