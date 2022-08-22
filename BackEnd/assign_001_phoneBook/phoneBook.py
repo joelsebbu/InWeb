@@ -11,7 +11,7 @@ def connectDB(func):
             conn= pyodbc.connect('''
                  
                 Driver={SQL Server};
-                Server=DESKTOP-UDFFDCR\SQLEXPRESS;
+                Server=DESKTOP-BMHPG59\SQLEXPRESS;
                 Database=emp_db;
                 Trusted_Connection=yes; 
         ''')
