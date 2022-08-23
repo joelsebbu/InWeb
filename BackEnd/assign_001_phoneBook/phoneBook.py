@@ -11,7 +11,7 @@ def connectDB(func):
             conn= pyodbc.connect('''
                  
                 Driver={SQL Server};
-                Server=DESKTOP-BMHPG59\SQLEXPRESS;
+                Server=DESKTOP-UDFFDCR\SQLEXPRESS;
                 Database=emp_db;
                 Trusted_Connection=yes; 
         ''')
@@ -43,14 +43,16 @@ def createPhonebook(cursor):
 
 @connectDB
 def addRecord(cursor,name,phone):
+    rt={}
     try:
         cursor.execute(''' 
             insert into Contacts(name,number) values(?,?);''',(name,phone)
         )
+        rt={"msg":"record-added"}
     except Exception as e:
-        print(e)
-        print("Insert Error")
-    
+        rt={"msg":str(e)}
+
+    return rt
 
 @connectDB
 def searchByName(cursor,name):
@@ -92,20 +94,30 @@ def listAll(cursor):
     
 @connectDB
 def deleteByName(cursor,name):
-    cursor.execute(''' 
-        delete from Contacts
-        where name = ? ;''',(name)
-    )
-    result=[{'name':row[0],'number':row[1]} for row in cursor]
-    return result
+    rt={}
+    try:
+        cursor.execute(''' 
+            delete from Contacts
+            where name = ? ;''',(name)
+        )
+        rt = {"msg":"record-deleted"}
+    except Exception as e:
+        rt ={"msg":str(e)}
+
+    return rt
     
 
 @connectDB
 def deleteByNumber(cursor,phone):
-    cursor.execute(''' 
-        delete from Contacts
-        where number = ? ;''',(phone)
-    )
-    # result=[{'name':row[0],'number':row[1]} for row in cursor]
-    # print(result)
-listAll()
+    rt={}
+    try:
+        cursor.execute(''' 
+            delete from Contacts
+            where number = ? ;''',(phone)
+        )
+        rt = {"msg":"record-deleted"}
+    except Exception as e:
+        rt ={"msg":str(e)}
+
+    return rt
+

@@ -18,33 +18,14 @@ def index():
 def contacts():
     return jsonify(pb.listAll())
 
-# @app.route('/contact-name/<string:name>')
-# def get_name(name):
-#     return jsonify(pb.searchByName(name))
-
-# @app.route('/contact-number/<int:number>')
-# def get_number(number):
-#     return jsonify(pb.searchByNumber(number))
-    
-# @app.route('/contact-name/<string:name>',methods=['DELETE'])
-# def delete_name(name):
-#     pass
-
-# @app.route('/contact-number/<int:number>',methods=['DELETE'])
-# def delete_number(number):
-#     pass
-
-# @app.route('/contact-name/<string:name>',methods=['PUT'])
-# def update_name(name):
-#     pass
-
-# @app.route('/contact-number/<int:number>',methods=['PUT'])
-# def update_number(number):
-#     pass
-
-@app.route('/contact',methods=['POST'])
+@app.route('/contacts',methods=['POST'])
 def new_contact():
-    pass
+    request_data = request.json
+    if len(request_data) == 2:
+        return jsonify(pb.addRecord(request_data["name"],int(request_data["number"])))    
+    else:
+        abort(404)
+    
 
 @app.route('/contact-name/<string:name>',methods=['GET','DELETE','PUT'])
 def contact_name(name):
@@ -52,7 +33,7 @@ def contact_name(name):
     if request.method =='GET':
         rt =jsonify(pb.searchByName(name))
     elif request.method == 'DELETE':
-        pass 
+        rt = jsonify(pb.deleteByName(name)) 
     elif request.method == 'PUT':
         pass       
     return rt
@@ -63,7 +44,7 @@ def contact_number(number):
     if request.method =='GET':
         rt =jsonify(pb.searchByNumber(number))
     elif request.method == 'DELETE':
-        pass 
+        rt= jsonify(pb.deleteByNumber(number))
     elif request.method == 'PUT':
         pass       
     return rt
