@@ -10,7 +10,12 @@ app= Flask(__name__)
 def index():
     return '''
         <ol>
-            <li><h3>/contacts</h3><ul>to list all contacts</ul></li>
+            <li><h3>/contacts GET</h3><ul>to list all contacts</ul></li>
+            <li><h3>/contacts/&lt;name&gt; POST</h3><ul>to insert contact</ul></li>
+            <li><h3>/contact/contact-name/&lt;name&gt; GET</h3><ul>to search a contact by name</ul></li>
+            <li><h3>/contact/contact-name/&lt;name&gt; DEL</h3><ul>to delete a contact</ul></li>
+            <li><h3>/contact/contact-number/&lt;number&gt; GET</h3><ul>to search a contact by number</ul></li>
+            <li><h3>/contact/contact-number/&lt;number&gt; DEL</h3><ul>to delete a contact by number</ul></li>
         </ol>
     '''
 
