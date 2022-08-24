@@ -1,18 +1,6 @@
-
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{url_for('static',filename = 'styles/user.css') }}">
-    <title>Document</title>
-</head>
-<body>
-    <h1>Hello {{username}} !</h1>
-    {% for i in range(1,11):%}
-        <h4>{{n}} * {{i}} = {{n*i}}</h4>
-        
-    {%endfor %}
-    <script src="../static/js/user.js"></script>
-</body>
-</html>
+{% extends "top-side_base.html"%}
+{%block content%}
+<h1>
+    Hola
+</h1>
+{%endblock%}
