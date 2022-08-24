@@ -1,12 +1,16 @@
 from flask import Flask, render_template
 
 app = Flask(__name__)
-# app.config['SECRETE']
+
 
 
 @app.route('/user/<string:name>')
 def user(name):
     return render_template('user.html')
+
+@app.route('/nice')
+def nice():
+    return render_template('nice.html')
 
 @app.route('/material/<string:name>')
 def material(name):
